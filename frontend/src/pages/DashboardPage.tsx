@@ -106,6 +106,8 @@ export default function DashboardPage() {
                 <div className="flex flex-col sm:flex-row gap-3 mb-6">
                     <input
                         type="text"
+                        id="search"
+                        name="search"
                         placeholder="Rechercher une tâche..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
@@ -117,9 +119,9 @@ export default function DashboardPage() {
                         className="px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900"
                     >
                         <option value="ALL">Tous les statuts</option>
-                        <option value="TODO">À faire</option>
+                        <option value="PENDING">À faire</option>
                         <option value="IN_PROGRESS">En cours</option>
-                        <option value="DONE">Terminée</option>
+                        <option value="COMPLETED">Terminée</option>
                     </select>
                     <button
                         onClick={openCreateModal}
