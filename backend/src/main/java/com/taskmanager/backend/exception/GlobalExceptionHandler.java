@@ -72,4 +72,10 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, "Something went wrong. Please try again later."));
     }
+
+    @ExceptionHandler(TaskNotFoundException.class)
+    public ResponseEntity<ApiError> handleTaskNotFound(TaskNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                .body(new ApiError(HttpStatus.NOT_FOUND, ex.getMessage()));
+    }
 }
