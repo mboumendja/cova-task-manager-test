@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cova-task-manager-test
+    username: root
+    password: rootpass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+jwt:
+  secret: gFC5YSoIlv7o6wg9TmZi5gScslWVCB/EcGBjLMZZEGqqUH4+d9MbhQDrPNLJRgcTrwJNb+EtwdbyZXzIOXLkffNLU7CyD/nnjqlI4sbObd
+  expiration: 86400000
