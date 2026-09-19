@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
@@ -26,7 +27,7 @@ import lombok.Setter;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
@@ -38,6 +39,9 @@ public class Task {
     @Column(nullable = false)
     @Builder.Default
     private TaskStatus status = TaskStatus.PENDING;
+
+    @ManyToOne
+    private User user;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
