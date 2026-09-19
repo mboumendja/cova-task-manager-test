@@ -53,7 +53,7 @@ public class AuthService {
 
         User user = (User) authentication.getPrincipal();
 
-        String accessToken = jwtUtil.generateToken(request.email());
+        String accessToken = jwtUtil.generateToken(user.getEmail());
 
         return new LoginResponse(user.getFullName(), user.getEmail(), accessToken, 3600L);
     }

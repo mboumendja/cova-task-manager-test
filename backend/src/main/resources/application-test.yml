@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/cova-task-manager-test
+    url: jdbc:mysql://127.0.0.1:3306/cova-task-manager-test
     username: root
-    password: rootpass
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

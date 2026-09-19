@@ -43,7 +43,7 @@ jobs:
       - name: Run tests
         working-directory: ./backend
         env:
-          SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/cova-task-manager-test
+          SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:3306/cova-task-manager-test
           SPRING_DATASOURCE_USERNAME: root
           SPRING_DATASOURCE_PASSWORD: rootpass
           JWT_SECRET: ci-test-secret-not-used-in-production-32chars
