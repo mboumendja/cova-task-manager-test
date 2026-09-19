@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import './App.css'
+import DashboardPage from "./pages/DashboardPage";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <></>
+                <DashboardPage />
               </ProtectedRoute>
             }
           />
